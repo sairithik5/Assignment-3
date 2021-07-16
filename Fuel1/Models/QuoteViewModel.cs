@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 namespace Fuel1.Models.QuoteViewModel
 {
@@ -14,18 +14,17 @@ namespace Fuel1.Models.QuoteViewModel
         public string DeliveryAddress { get; set; }
 
         [Required(ErrorMessage = "Date Requested is required!")]
-        [DataType(DataType.Text)]
+        [DataType(DataType.Date)]
         public string DateRequested { get; set; }
 
         [Required(ErrorMessage = "Price Per Gallon is required!")]
-        [DataType(DataType.Text)]
+        [DataType(DataType.Currency)]
         public string PricePerGallon { get; set; }
 
         [Required(ErrorMessage = "Total Amount Due is required!")]
-        [DataType(DataType.Text)]
+        [DataType(DataType.Currency)]
         public string TotalAmount { get; set; }
 
-
-
+        
     }
 }
