@@ -1,0 +1,103 @@
+﻿@model Fuel1.Models.Login.LoginModel 
+@{
+    ViewBag.Title = "LoginView";
+}
+<html>
+<div style="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+body {font-family: Arial, Helvetica, sans-serif;width:40%;padding-left:30%;padding-top:7%;background-image:url('images.jpeg');background-repeat:no-repeat;background-size:cover;}
+form {border: 3px solid #000000;background-color:#FFFFFFAA;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.70;
+  background-color: #FFFFFF
+  color:#04AA6D
+}
+a.hover{
+color:red;
+}
+
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+.heading{
+text-align:center;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+
+        </style>
+    </head>
+
+    <body>
+
+        <h2 class="heading">Login Form</h2>
+
+        <form role="form" asp-action="Login" asp-controller="Login" method="post">
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input asp-for="Email" type="text" placeholder="Enter Username"  pattern="[A-Za-z0-9_]+"
+                       title="Username can only contain alphabets, digits and underscore. e.g. Raj_123" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input asp-for="Password" type="password" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                       title="Password must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+                <button type="submit">Login</button>
+                <label>
+
+            </div>
+
+            <div class="container">
+                <a asp-area="" asp-controller="Login" asp-action="RegisterView"><button type="button" class="cancelbtn">Register</button></a>
+            </div>
+        </form>
+
+    </body>
+</div>
+</html>
