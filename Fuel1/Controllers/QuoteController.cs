@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FuelQuoteApp.Models.Quote;
+using Fuel1.Models.QuoteViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FuelQuoteApp.Controllers
@@ -14,22 +14,26 @@ namespace FuelQuoteApp.Controllers
         {
             QuoteViewModel quote = new QuoteViewModel();
             quote.DeliveryAddress = "4045 Linkwood Drive";
-            quote.PricePerGallon = 100;
-            quote.TotalAmount = 9999;
-            return View(quote);
+            quote.PricePerGallon = "100";
+            return View("QuoteGenerator",quote);
         }
 
+        public IActionResult GetQuote1(QuoteViewModel model)
+        {
+            
+            return View("QuoteGenerator", model);
+        }
 
         [HttpGet]
         public IActionResult QuoteHistory()
         {
             QuoteViewModel quote = new QuoteViewModel()
             {
-                DateRequested = DateTime.Now,
-                GallonsRequested = 90,
+                DateRequested = DateTime.Now.ToString(),
+                GallonsRequested = "90",
                 DeliveryAddress = "Linkwood Drive",
-                PricePerGallon = 2,
-                TotalAmount = 1500
+                PricePerGallon = "2",
+                TotalAmount = "1500"
             };
             List<QuoteViewModel> quotes = new List<QuoteViewModel>();
             quotes.Add(quote);

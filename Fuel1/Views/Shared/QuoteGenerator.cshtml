@@ -98,18 +98,18 @@
 </head>
 <body>
 
-    <form role="form" asp-action="GetQuote" asp-controller="QuoteController" method="post">
+    <form role="form" asp-action="GetQuote1" asp-controller="Quote" method="post">
         <div class="container">
             <p>Please fill in the below details to generate quote</p>
 
             <label for="gallonsrequested"><b>Gallons Requested</b></label>
             <br>
-            <input asp-for="GallonsRequested" type="number" placeholder="Enter number of gallons required" name="gallonsrequested" id="gallonsrequested" onChange="totalamount();" min="1" required>
+            <input asp-for="GallonsRequested" type="number" placeholder="Enter number of gallons required" id="gallonsrequested" onChange="totalamount();" min="1" required>
             <span asp-validation-for="GallonsRequested" class="text-danger"></span>
             </br>
             </br>
-            <label for="deliveryaddress"><b>Delivery Address</b></label>
-            <input asp-for="DeliveryAddress" type="text" name="address1" id="address1" maxlength="100" value="400 calhoun road, houston, TX, 77054" readonly>
+            <label asp-for="DeliveryAddress"><b>Delivery Address</b></label>
+            <input asp-for="DeliveryAddress" type="text" name="address1" id="address1" value="QuoteViewModel.DeliveryAddress" maxlength="100" readonly>
             </br>
             </br>
             <label for="deliverydate"><b>Delivery Date</b></label>
@@ -119,11 +119,11 @@
             <span asp-validation-for="DateRequested" class="text-danger"></span>
             </br>
             </br>
-            <label for="suggestedpricepergallon"><b>Suggested Price / gallon</b></label>
-            <input asp-for="PricePerGallon" type="number" name="suggestedpricepergallon" id="suggestedpricepergallon" value="2" onChange="totalamount();" readonly>
+            <label asp-for="PricePerGallon"><b>Suggested Price / gallon</b></label>
+            <input asp-for="PricePerGallon" type="number" name="suggestedpricepergallon" id="suggestedpricepergallon" onChange="totalamount();" readonly>
             </br>
             </br>
-            <label for="totalamountdue"><b>Total Amount Due</b></label>
+            <label asp-for="TotalAmount"><b>Total Amount Due</b></label>
             <input asp-for="TotalAmount" type="number" name="totalamountdue" id="totalamountdue" value="" readonly>
 
             <br>
