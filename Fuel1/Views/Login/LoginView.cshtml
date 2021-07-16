@@ -81,12 +81,12 @@ span.psw {
 
             <div class="container">
                 <label for="uname"><b>Username</b></label>
-                <input asp-for="Email" type="text" placeholder="Enter Username"  pattern="[A-Za-z0-9_]+"
+                <input asp-for="Username" type="text" placeholder="Enter Username"  pattern="[A-Za-z0-9_]+"
                        title="Username can only contain alphabets, digits and underscore. e.g. Raj_123" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input asp-for="Password" type="password" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                       title="Password must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <input asp-for="Password" type="password" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[#?!$%^&*-]).{8,}"
+                       title="Password must contain at least one  number and one uppercase and lowercase letter and one special character, and at least 8 or more characters" required>
 
                 <button type="submit">Login</button>
                 <label>

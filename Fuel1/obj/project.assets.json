@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\pooitha rao\\.nuget\\packages\\": {}
+    "C:\\Users\\sairi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pooitha rao\\Source\\Repos\\SDAss3\\Fuel1\\Fuel1.csproj",
+      "projectUniqueName": "C:\\Users\\sairi\\Source\\Repos\\Assignment-3\\Fuel1\\Fuel1.csproj",
       "projectName": "Fuel1",
-      "projectPath": "C:\\Users\\pooitha rao\\Source\\Repos\\SDAss3\\Fuel1\\Fuel1.csproj",
-      "packagesPath": "C:\\Users\\pooitha rao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pooitha rao\\Source\\Repos\\SDAss3\\Fuel1\\obj\\",
+      "projectPath": "C:\\Users\\sairi\\Source\\Repos\\Assignment-3\\Fuel1\\Fuel1.csproj",
+      "packagesPath": "C:\\Users\\sairi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sairi\\Source\\Repos\\Assignment-3\\Fuel1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pooitha rao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sairi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

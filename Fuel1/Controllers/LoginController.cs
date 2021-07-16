@@ -1,4 +1,5 @@
 ﻿using Fuel1.Models.Login;
+using Fuel1.Models.QuoteViewModel;
 using Fuel1.Models.ProfileManagement;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -7,6 +8,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
 
 
 namespace Fuel1.Controllers
@@ -27,7 +30,7 @@ namespace Fuel1.Controllers
         public async Task<IActionResult> Login(LoginModel model)
         {
 
-            if (model.Email == "Raj_123" && model.Password == "Qwerty!123")
+            if (model.Username == "Raj_123" && model.Password == "Qwerty!123")
             {
                 return RedirectToAction("Home1", "Login");
             }
@@ -36,7 +39,7 @@ namespace Fuel1.Controllers
 
                 
 
-                if (model.Email=="Raj_123" && model.Password=="Qwerty!123")
+                if (model.Username == "Raj_123" && model.Password=="Qwerty!123")
                 {
                     return RedirectToAction("Home1", "Login");
                 }
@@ -50,11 +53,19 @@ namespace Fuel1.Controllers
 
         public async Task<IActionResult> Register(LoginModel model)
         {
-            return RedirectToAction("ProfileManage", "Client");
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("ProfileManage", "Client");
+            }
+            return View();
         }
-        public async Task<IActionResult> ProfileManagement(ProfileManagement model)
+        public async Task<IActionResult> ProfileManagement(ProfileManagement profilemodel)
         {
-            return RedirectToAction("Home1", "Login");
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Home1", "Login");
+            }
+            return View();
         }
 
 
@@ -63,7 +74,29 @@ namespace Fuel1.Controllers
             return View("Home");
         }
 
-        
+        public bool RegisterDataValidation(LoginModel logininfo)
+        {
+            bool flag = false;
+            if ((logininfo.Username.Length <= 50) && (logininfo.Username != String.Empty))
+            {
+                if ((Regex.IsMatch(logininfo.Username, @"^[a-zA-Z0-9]_")) && (logininfo.Username != String.Empty))
+                {
+                    if (Regex.IsMatch(logininfo.Password, @"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!$%^&*-]).{8,}$") && Regex.IsMatch(logininfo.repassword, @"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!$%^&*-]).{8,}$"))
+                    {
+                        if (logininfo.Password == logininfo.repassword)
+                        {
+                            flag = true;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                flag = false;
+            }
+
+            return flag;
+        }
 
     }
 }
