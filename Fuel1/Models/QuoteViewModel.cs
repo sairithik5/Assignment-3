@@ -14,17 +14,18 @@ namespace Fuel1.Models.QuoteViewModel
         public string DeliveryAddress { get; set; }
 
         [Required(ErrorMessage = "Date Requested is required!")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Text)]
         public string DateRequested { get; set; }
 
         [Required(ErrorMessage = "Price Per Gallon is required!")]
-        [DataType(DataType.Currency)]
+        [DataType(DataType.Text)]
         public string PricePerGallon { get; set; }
 
         [Required(ErrorMessage = "Total Amount Due is required!")]
-        [DataType(DataType.Currency)]
+        [DataType(DataType.Text)]
         public string TotalAmount { get; set; }
 
-        
+
+
     }
 }
