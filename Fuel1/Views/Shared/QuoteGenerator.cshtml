@@ -115,9 +115,7 @@
             </br>
             <label for="deliverydate"><b>Delivery Date</b></label>
             <br>
-
-            <input asp-for="DateRequested" type="date" asp-format="{0:yyyy-MM-dd}" name="date" class="form-control datepicker" autocomplete="off">
-            <span asp-validation-for="DateRequested" class="text-danger"></span>
+            <input asp-for="DateRequested" type="date" asp-format="{0:yyyy-MM-dd}" name="date" class="form-control datepicker" required>
             </br>
             </br>
             <label for="suggestedpricepergallon"><b>Suggested Price / gallon</b></label>
@@ -141,10 +139,7 @@
 		result = ngallons * price;
 		document.getElementById("totalamountdue").value = result;
 	}
-
-	$('.datepicker').datepicker({
-        startDate: new Date()
-    });</script>
+    </script>
 
 </body>
 </html>

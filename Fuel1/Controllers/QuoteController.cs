@@ -19,7 +19,7 @@ namespace Fuel1.Controllers
             if (ModelState.IsValid)
             {
                 QuoteViewModel model = new QuoteViewModel();
-                model.DateRequested = DateTime.Now.ToString();
+                model.DateRequested = DateTime.Now;
                 model.GallonsRequested = 3;
                 model.DeliveryAddress = "Linky drive";
                 model.PricePerGallon = "10";
@@ -37,7 +37,7 @@ namespace Fuel1.Controllers
             bool flag = false;
             if ((model.DeliveryAddress.Length <= 100) && (model.DeliveryAddress != String.Empty))
             {
-                if (model.GallonsRequested > 0)
+                if ((model.GallonsRequested > 0) && (model.DateRequested > DateTime.Now))
                 {
                     flag = true;
                 }
