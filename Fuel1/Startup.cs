@@ -50,7 +50,7 @@ namespace Fuel1
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Login}/{action=LoginView}/{id?}");
+                    pattern: "{controller=Login}/{action=Home1}/{id?}");
             });
         }
     }

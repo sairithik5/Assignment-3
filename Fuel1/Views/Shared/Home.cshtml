@@ -1,93 +1,37 @@
 ﻿@{
     ViewBag.Title = "HomeView";
+    Layout = "~/Views/Client/Client_Layout.cshtml";
 }
 
 <!DOCTYPE html>
 <html>
-<head>
-    <style>
-        body {
-            font-size: 28px;
-        }
+<style>
+    h3, body, img, p {
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-            position: -webkit-sticky; /* Safari */
-            position: sticky;
-            top: 0;
-        }
+    p {
+        padding-left: 100px;
+        padding-right: 100px
+    }
 
-        li {
-            float: left;
-        }
-
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-                li a:hover {
-                    background-color: #111;
-                }
-
-        .active {
-            background-color: #4CAF50;
-        }
-
-        html, body, iframe {
-            margin: 0px;
-            padding: 0px;
-            height: 100%;
-            border: none;
-        }
-
-        iframe {
-            display: block;
-            width: 100%;
-            border: none;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-    </style>
-</head>
+    h3 {
+        padding-left: 625px
+    }
+</style>
 <body>
-    <div id="myDIV">
-        <ul>
-            <li><a class="btn active" href="homepage.html" target="iframe_a">Home</a></li>
-            <li><a class="btn" target="iframe_a" asp-area="" asp-controller="Client">Quote History</a></li>
-            <li><a class="btn" target="iframe_a" asp-area="" asp-controller="Client" asp-action="ViewProfile">Profile</a></li>
-            <li><a class="btn" asp-area="" asp-controller="Quote" asp-action="GetQuote" target="iframe_a">Quote Generator</a></li>
-        </ul>
+    <div>
+        <img src="~\Fuel1\images\logo.jpeg" width="600" height="300">
     </div>
 
-    <iframe src="homepage.html"
-            name="iframe_a"
-            title="Iframe Example"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            width="100%"
-            height="100%"
-            scrolling="auto">
-    </iframe>
 
-    <script>// Add active class to the current button (highlight it)
-var header = document.getElementById("myDIV");
-var btns = header.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
-}</script>
+    <p>
+        We are a best-in class, low-cost operator with assets in the United Stated, Middle East, Africa and Latin America, applying technologies to drive operational excellence
+        and leveraging our global leadership in carbon management to advance our business.
+    </p>
 
 </body>
 </html>

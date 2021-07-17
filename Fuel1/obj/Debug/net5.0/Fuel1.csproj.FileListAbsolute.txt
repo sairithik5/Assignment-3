@@ -238,3 +238,5 @@ C:\Users\pooitha rao\Source\Repos\FuelQuoteApplication\Fuel1\obj\Debug\net5.0\re
 C:\Users\pooitha rao\Source\Repos\FuelQuoteApplication\Fuel1\obj\Debug\net5.0\Fuel1.pdb
 C:\Users\pooitha rao\Source\Repos\FuelQuoteApplication\Fuel1\obj\Debug\net5.0\Fuel1.genruntimeconfig.cache
 C:\Users\pooitha rao\Source\Repos\FuelQuoteApplication\Fuel1\obj\Debug\net5.0\Fuel1.csproj.CopyComplete
+C:\Users\pooitha rao\Source\Repos\FuelQuoteApplication\Fuel1\obj\Debug\net5.0\Razor\Views\Client\Client_layout.cshtml.g.cs
+C:\Users\pooitha rao\Source\Repos\FuelQuoteApplication\Fuel1\obj\Debug\net5.0\Razor\Views\Shared\QuoteHistory.cshtml.g.cs

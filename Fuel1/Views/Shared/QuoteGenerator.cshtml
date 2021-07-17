@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "QuoteGeneratorView";
+    Layout = "~/Views/Client/Client_layout.cshtml";
 }
 
 
@@ -57,7 +58,7 @@
         /* Set a style for the submit button */
         .registerbtn {
             background-color: #04AA6D;
-            color: white;
+            color: #ffffff;
             padding: 14px 20px;
             margin: 8px 0;
             border: none;
@@ -72,7 +73,8 @@
 
         /* Add a blue text color to links */
         a {
-            color: dodgerblue;
+            color: white;
+            background-color: black;
         }
 
         /* Set a grey background color and center the text of the "sign in" section */
@@ -91,11 +93,7 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -112,7 +110,8 @@
             <label for="deliveryaddress"><b>Delivery Address</b></label>
             <input asp-for="DeliveryAddress" type="text" name="address1" id="address1" maxlength="100" value="400 calhoun road, houston, TX, 77054" readonly>
             </br>
-            </br>
+            
+
             <label for="deliverydate"><b>Delivery Date</b></label>
             <br>
             <input asp-for="DateRequested" type="date" asp-format="{0:yyyy-MM-dd}" name="date" class="form-control datepicker" required>
@@ -132,14 +131,16 @@
 
     </form>
 
-    <script>var ngallons,price;
-	function totalamount(){
-		ngallons = document.getElementById("gallonsrequested").value;
-		price = document.getElementById("suggestedpricepergallon").value;
-		result = ngallons * price;
-		document.getElementById("totalamountdue").value = result;
-	}
-    </script>
+    <script>
+    var ngallons, price;
+        function totalamount() {
+            ngallons = document.getElementById("gallonsrequested").value;
+            price = document.getElementById("suggestedpricepergallon").value;
+            result = ngallons * price;
+            document.getElementById("totalamountdue").value = result;
+        }
+
+        </script>
 
 </body>
 </html>
