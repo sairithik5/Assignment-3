@@ -1,10 +1,12 @@
 @model Fuel1.Models.QuoteViewModel.QuoteViewModel
 
 @{
-    ViewData["Title"] = "GetQuote";
+    ViewData["Title"] = "QuoteGeneratorView";
 }
 
-<h2>GetQuote</h2>
+
+<!DOCTYPE html>
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -30,7 +32,6 @@
             padding: 16px;
             background-color: white;
         }
-
 
         /* Full-width input fields */
         input[type=text], input[type=password] {
@@ -98,32 +99,32 @@
 </head>
 <body>
 
-    <form role="form" asp-action="GetQuote1" asp-controller="Quote" method="post">
+    <form role="form" asp-action="ShowHistory" asp-controller="Quote" method="post">
         <div class="container">
             <p>Please fill in the below details to generate quote</p>
 
             <label for="gallonsrequested"><b>Gallons Requested</b></label>
             <br>
-            <input asp-for="GallonsRequested" type="number" placeholder="Enter number of gallons required" id="gallonsrequested" onChange="totalamount();" min="1" required>
+            <input asp-for="GallonsRequested" type="number" placeholder="Enter number of gallons required" name="gallonsrequested" id="gallonsrequested" onChange="totalamount();" min="1" required>
             <span asp-validation-for="GallonsRequested" class="text-danger"></span>
             </br>
             </br>
-            <label asp-for="DeliveryAddress"><b>Delivery Address</b></label>
-            <input asp-for="DeliveryAddress" type="text" name="address1" id="address1" value="QuoteViewModel.DeliveryAddress" maxlength="100" readonly>
+            <label for="deliveryaddress"><b>Delivery Address</b></label>
+            <input asp-for="DeliveryAddress" type="text" name="address1" id="address1" maxlength="100" value="400 calhoun road, houston, TX, 77054" readonly>
             </br>
             </br>
             <label for="deliverydate"><b>Delivery Date</b></label>
             <br>
 
-            <input asp-for="DateRequested" type="text" name="date" class="form-control datepicker" autocomplete="off">
+            <input asp-for="DateRequested" type="date" asp-format="{0:yyyy-MM-dd}" name="date" class="form-control datepicker" autocomplete="off">
             <span asp-validation-for="DateRequested" class="text-danger"></span>
             </br>
             </br>
-            <label asp-for="PricePerGallon"><b>Suggested Price / gallon</b></label>
-            <input asp-for="PricePerGallon" type="number" name="suggestedpricepergallon" id="suggestedpricepergallon" onChange="totalamount();" readonly>
+            <label for="suggestedpricepergallon"><b>Suggested Price / gallon</b></label>
+            <input type="number" name="suggestedpricepergallon" id="suggestedpricepergallon" value="2" onChange="totalamount();" readonly>
             </br>
             </br>
-            <label asp-for="TotalAmount"><b>Total Amount Due</b></label>
+            <label for="totalamountdue"><b>Total Amount Due</b></label>
             <input asp-for="TotalAmount" type="number" name="totalamountdue" id="totalamountdue" value="" readonly>
 
             <br>
@@ -133,17 +134,17 @@
 
     </form>
 
-    <script>var ngallons, price;
-        function totalamount() {
-            ngallons = document.getElementById("gallonsrequested").value;
-            price = document.getElementById("suggestedpricepergallon").value;
-            result = ngallons * price;
-            document.getElementById("totalamountdue").value = result;
-        }
+    <script>var ngallons,price;
+	function totalamount(){
+		ngallons = document.getElementById("gallonsrequested").value;
+		price = document.getElementById("suggestedpricepergallon").value;
+		result = ngallons * price;
+		document.getElementById("totalamountdue").value = result;
+	}
 
-        $('.datepicker').datepicker({
-            startDate: new Date()
-        });</script>
+	$('.datepicker').datepicker({
+        startDate: new Date()
+    });</script>
 
 </body>
 </html>
