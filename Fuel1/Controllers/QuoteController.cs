@@ -16,15 +16,39 @@ namespace Fuel1.Controllers
         }
         public IActionResult ShowHistory()
         {
-            QuoteViewModel model = new QuoteViewModel();
-            model.DateRequested = DateTime.Now.ToString();
-            model.GallonsRequested = "3";
-            model.DeliveryAddress = "Linky drive";
-            model.PricePerGallon = "10";
-            model.TotalAmount = "100";
-            List<QuoteViewModel> quotes = new List<QuoteViewModel>();
+            if (ModelState.IsValid)
+            {
+                QuoteViewModel model = new QuoteViewModel();
+                model.DateRequested = DateTime.Now.ToString();
+                model.GallonsRequested = 3;
+                model.DeliveryAddress = "Linky drive";
+                model.PricePerGallon = "10";
+                model.TotalAmount = "100";
+                List<QuoteViewModel> quotes = new List<QuoteViewModel>();
 
-            return View("QuoteHistory",quotes);
+                return View("QuoteHistory", quotes);
+
+            }
+            return View();
         }
+
+        public bool QuoteDataValidation(QuoteViewModel model)
+        {
+            bool flag = false;
+            if ((model.DeliveryAddress.Length <= 100) && (model.DeliveryAddress != String.Empty))
+            {
+                if (model.GallonsRequested > 0)
+                {
+                    flag = true;
+                }
+            }
+            else
+            {
+                flag = false;
+            }
+
+            return flag;
+        }
+
     }
 }

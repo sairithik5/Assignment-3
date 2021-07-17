@@ -18,17 +18,22 @@ namespace Fuel1.Controllers
 
         public IActionResult ViewProfile()
         {
-            ProfileManagement profile = new ProfileManagement()
+            if (ModelState.IsValid)
             {
-                Name = "Raj Singh",
-                Address1 = "4800 Calhoun Rd",
-                Address2 = "Building 1",
-                City = "Houston",
-                State = "TX",
-                Zipcode = "77002"
-            };
-            
-            return View(profile);
+                ProfileManagement profile = new ProfileManagement()
+                {
+                    Name = "Raj Singh",
+                    Address1 = "4800 Calhoun Rd",
+                    Address2 = "Building 1",
+                    City = "Houston",
+                    State = "TX",
+                    Zipcode = "77002"
+                };
+
+                return View(profile);
+            }
+            return View();
+
         }
 
         public bool ProfileDataValidation(ProfileManagement profilemanage)

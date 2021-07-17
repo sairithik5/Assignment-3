@@ -7,7 +7,7 @@ namespace Fuel1.Models.QuoteViewModel
 
         [Required(ErrorMessage = "Gallons Requested is required!")]
         [DataType(DataType.Text)]
-        public string GallonsRequested { get; set; }
+        public int GallonsRequested { get; set; }
 
         [Required(ErrorMessage = "Delivery Address is required!")]
         [DataType(DataType.Text)]
