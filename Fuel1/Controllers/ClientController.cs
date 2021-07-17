@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Fuel1.Models.ProfileManagement;
 
+
 namespace Fuel1.Controllers
 {
     public class ClientController : Controller
@@ -24,10 +25,34 @@ namespace Fuel1.Controllers
                 Address2 = "Building 1",
                 City = "Houston",
                 State = "TX",
-                Zipcode = 77002
+                Zipcode = "77002"
             };
             
             return View(profile);
+        }
+
+        public bool ProfileDataValidation(ProfileManagement profilemanage)
+        {
+            bool flag = false;
+            if ((profilemanage.Name.Length <= 50) && (profilemanage.Name != String.Empty))
+            {
+                if (((profilemanage.Address1.Length <= 100) && (profilemanage.Address1 != String.Empty)) && (profilemanage.Address2.Length <= 100))
+                {
+                    if ((profilemanage.City.Length <= 100) && (profilemanage.City != String.Empty))
+                    {
+                        if (profilemanage.Zipcode.Length <= 9 && profilemanage.Zipcode.Length >= 5)
+                        {
+                            flag = true;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                flag = false;
+            }
+
+            return flag;
         }
     }
 }

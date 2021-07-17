@@ -30,7 +30,7 @@ namespace Fuel1.Models.ProfileManagement
 
         [Required(ErrorMessage = "ZipCode is required!")]
         [DataType(DataType.PostalCode)]
-        public int Zipcode { get; set; }
+        public string Zipcode { get; set; }
 
     }
 }
