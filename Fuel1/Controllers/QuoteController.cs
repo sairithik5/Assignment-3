@@ -1,44 +1,30 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Fuel1.Models.QuoteViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Fuel1.Models.QuoteViewModel;
 
-namespace FuelQuoteApp.Controllers
+namespace Fuel1.Controllers
 {
     public class QuoteController : Controller
+
     {
-        [HttpGet]
         public IActionResult GetQuote()
         {
-            QuoteViewModel quote = new QuoteViewModel();
-            quote.DeliveryAddress = "4045 Linkwood Drive";
-            quote.PricePerGallon = "100";
-            return View("QuoteGenerator",quote);
+            return View("QuoteGenerator");
         }
-
-        public IActionResult GetQuote1(QuoteViewModel model)
+        public IActionResult ShowHistory()
         {
-            
-            return View("QuoteGenerator", model);
-        }
-
-        [HttpGet]
-        public IActionResult QuoteHistory()
-        {
-            QuoteViewModel quote = new QuoteViewModel()
-            {
-                DateRequested = DateTime.Now.ToString(),
-                GallonsRequested = "90",
-                DeliveryAddress = "Linkwood Drive",
-                PricePerGallon = "2",
-                TotalAmount = "1500"
-            };
+            QuoteViewModel model = new QuoteViewModel();
+            model.DateRequested = DateTime.Now.ToString();
+            model.GallonsRequested = "3";
+            model.DeliveryAddress = "Linky drive";
+            model.PricePerGallon = "10";
+            model.TotalAmount = "100";
             List<QuoteViewModel> quotes = new List<QuoteViewModel>();
-            quotes.Add(quote);
 
-            return View(quotes);
+            return View("QuoteHistory",quotes);
         }
     }
 }
