@@ -61,10 +61,10 @@
 <body>
     <div id="myDIV">
         <ul>
-            <li>@Html.ActionLink("Home","Home1","Login")</li>
-            <li>@Html.ActionLink("Quote History","ShowHistory","Quote")</li>
-            <li>@Html.ActionLink("Profile","ViewProfile","Client")</li>
-            <li>@Html.ActionLink("Quote Generator","GetQuote","Quote")</li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="Home1"?"active nav-item":"nav-item")">@Html.ActionLink("Home","Home1","Login",new { area=""},new { @class="nav-link"})</li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="ShowHistory"?"active nav-item":"nav-item")">@Html.ActionLink("Quote History","ShowHistory","Quote", new { area = "" }, new { @class = "nav-link" })</li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="ViewProfile"?"active nav-item":"nav-item")">@Html.ActionLink("Profile","ViewProfile","Client", new { area = "" }, new { @class = "nav-link" })</li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="GetQuote"?"active nav-item":"nav-item")">@Html.ActionLink("Quote Generator","GetQuote","Quote", new { area = "" }, new { @class = "nav-link" })</li>
         </ul>
     </div>
 
