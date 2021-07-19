@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pooitha rao\\Source\\Repos\\FuelQuoteApplication\\Fuel1\\Fuel1.csproj": {}
+    "C:\\Users\\sairi\\Desktop\\SD\\Assg3\\Assignment-3\\Fuel1\\Fuel1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pooitha rao\\Source\\Repos\\FuelQuoteApplication\\Fuel1\\Fuel1.csproj": {
+    "C:\\Users\\sairi\\Desktop\\SD\\Assg3\\Assignment-3\\Fuel1\\Fuel1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pooitha rao\\Source\\Repos\\FuelQuoteApplication\\Fuel1\\Fuel1.csproj",
+        "projectUniqueName": "C:\\Users\\sairi\\Desktop\\SD\\Assg3\\Assignment-3\\Fuel1\\Fuel1.csproj",
         "projectName": "Fuel1",
-        "projectPath": "C:\\Users\\pooitha rao\\Source\\Repos\\FuelQuoteApplication\\Fuel1\\Fuel1.csproj",
-        "packagesPath": "C:\\Users\\pooitha rao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pooitha rao\\Source\\Repos\\FuelQuoteApplication\\Fuel1\\obj\\",
+        "projectPath": "C:\\Users\\sairi\\Desktop\\SD\\Assg3\\Assignment-3\\Fuel1\\Fuel1.csproj",
+        "packagesPath": "C:\\Users\\sairi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sairi\\Desktop\\SD\\Assg3\\Assignment-3\\Fuel1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pooitha rao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sairi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -61,10 +61,10 @@
 <body>
     <div id="myDIV">
         <ul>
-            <li><a class="btn active" asp-area="" asp-controller="Login" asp-action="Home1">Home</a></li>
-            <li><a class="btn" asp-area="" asp-controller="Quote" asp-action="ShowHistory">Quote History</a></li>
-            <li><a class="btn" asp-area="" asp-controller="Client" asp-action="ViewProfile">Profile</a></li>
-            <li><a class="btn" asp-area="" asp-controller="Quote" asp-action="GetQuote">Quote Generator</a></li>
+            <li>@Html.ActionLink("Home","Home1","Login")</li>
+            <li>@Html.ActionLink("Quote History","ShowHistory","Quote")</li>
+            <li>@Html.ActionLink("Profile","ViewProfile","Client")</li>
+            <li>@Html.ActionLink("Quote Generator","GetQuote","Quote")</li>
         </ul>
     </div>
 
