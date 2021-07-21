@@ -1,79 +1,91 @@
-﻿@model Fuel1.Models.Login.LoginModel 
+﻿@model Fuel1.Models.Login.LoginModel
 @{
     ViewBag.Title = "LoginView";
 }
 <!DOCTYPE html>
 <html>
 <div style="">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;width:40%;padding-left:30%;padding-top:7%;background-image:url('images.jpeg');background-repeat:no-repeat;background-size:cover;}
-form {border: 3px solid #000000;background-color:#FFFFFFAA;}
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                width: 40%;
+                padding-left: 30%;
+                padding-top: 7%;
+                background-image: url(~/images/images.jpeg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+            form {
+                border: 3px solid #000000;
+                background-color: #FFFFFFAA;
+            }
 
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
 
-button:hover {
-  opacity: 0.70;
-  background-color: #FFFFFF
-  color:#04AA6D
-}
-a.hover{
-color:red;
-}
+            button {
+                background-color: #04AA6D;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
 
+                button:hover {
+                    opacity: 0.70;
+                    background-color: #FFFFFF color:#04AA6D
+                }
 
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-.heading{
-text-align:center;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
+            a.hover {
+                color: red;
+            }
 
 
-</style>
-</head>
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
 
-<body>
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+
+
+            img.avatar {
+                width: 40%;
+                border-radius: 50%;
+            }
+
+            .heading {
+                text-align: center;
+            }
+
+            .container {
+                padding: 16px;
+            }
+
+            span.psw {
+                float: right;
+                padding-top: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
 
         <h2 class="heading">Login Form</h2>
 
@@ -81,7 +93,7 @@ span.psw {
 
             <div class="container">
                 <label for="uname"><b>Username</b></label>
-                <input asp-for="Username" type="text" placeholder="Enter Username"  pattern="[A-Za-z0-9_]+"
+                <input asp-for="Username" type="text" placeholder="Enter Username" pattern="[A-Za-z0-9_]+"
                        title="Username can only contain alphabets, digits and underscore. e.g. Raj_123" required>
 
                 <label for="psw"><b>Password</b></label>
@@ -101,3 +113,6 @@ span.psw {
     </body>
 </div>
 </html>
+
+
+

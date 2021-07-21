@@ -1,10 +1,19 @@
 ﻿@{
     ViewBag.Title = "HomeView";
-    Layout = "~/Views/Client/Client_Layout.cshtml";
+    Layout = "~/Views/Client/Client_home_layout.cshtml";
 }
 
 <!DOCTYPE html>
 <html>
+<script type="text/javascript" language="javascript">
+            function DisableBackButton() {
+                window.history.forward()
+            }
+            DisableBackButton();
+            window.onload = DisableBackButton;
+            window.onpageshow = function (evt) { if (evt.persisted) DisableBackButton() }
+            window.onunload = function () { void (0) }
+</script>
 <style>
     h3, body, img, p {
         font-family: Arial, Helvetica, sans-serif;
@@ -24,8 +33,9 @@
 </style>
 <body>
     <div>
+
+        <img alt="error" src="~/images/images.jpeg" width="600" height="300">
         
-        <img src="C:\Users\sairi\Desktop\SD\Assg3\Assignment-3\Fuel1\Views\Shared\logo.jpeg"  width="600" height="300">
     </div>
 
 

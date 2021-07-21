@@ -56,22 +56,20 @@
             width: 100%;
             height: 100%;
         }
-        .logout{
-            float:right;
+
+        .logout {
+            float: right;
         }
     </style>
 </head>
 <body>
     <div id="myDIV">
         <ul>
-            <li>
-            </ul>
-        <ul>
             <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="Home1"?"active nav-item":"nav-item")">@Html.ActionLink("Home", "Home1", "Login", new { area = "" }, new { @class = "nav-link" })</li>
             <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="ShowHistory"?"active nav-item":"nav-item")">@Html.ActionLink("Quote History", "ShowHistory", "Quote", new { area = "" }, new { @class = "nav-link" })</li>
             <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="ViewProfile"?"active nav-item":"nav-item")">@Html.ActionLink("Profile", "ViewProfile", "Client", new { area = "" }, new { @class = "nav-link" })</li>
             <li class="@(ViewContext.RouteData.Values["Action"].ToString()=="GetQuote"?"active nav-item":"nav-item")">@Html.ActionLink("Quote Generator", "GetQuote", "Quote", new { area = "" }, new { @class = "nav-link" })</li>
-            
+            <li class="logout">@Html.ActionLink("Logoff", "LoginView", "Login")</li>
 
         </ul>
     </div>

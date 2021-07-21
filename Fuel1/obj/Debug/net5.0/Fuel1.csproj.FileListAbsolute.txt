@@ -291,3 +291,4 @@ C:\Users\sairi\Desktop\SD\Assg3\Assignment-3\Fuel1\obj\Debug\net5.0\ref\Fuel1.dl
 C:\Users\sairi\Desktop\SD\Assg3\Assignment-3\Fuel1\obj\Debug\net5.0\Fuel1.pdb
 C:\Users\sairi\Desktop\SD\Assg3\Assignment-3\Fuel1\obj\Debug\net5.0\Fuel1.genruntimeconfig.cache
 C:\Users\sairi\Desktop\SD\Assg3\Assignment-3\Fuel1\obj\Debug\net5.0\Fuel1.csproj.CopyComplete
+C:\Users\sairi\Desktop\SD\Assg3\Assignment-3\Fuel1\obj\Debug\net5.0\Razor\Views\Client\Client_home_layout.cshtml.g.cs

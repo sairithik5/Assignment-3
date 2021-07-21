@@ -25,10 +25,10 @@ namespace Fuel1.Controllers
                 model.PricePerGallon = "10";
                 model.TotalAmount = "100";
                 List<QuoteViewModel> quotes = new List<QuoteViewModel>();
-
+                quotes.Add(model);
                 return View("QuoteHistory", quotes);
-
             }
+
             return View();
         }
 
